@@ -209,12 +209,40 @@ if (siteHeader) {
 }
 
 
+/* =========================================
+   NAVIGATION — ACTIVE PAGE
+========================================= */
+
+const currentPage =
+  window.location.pathname
+    .split("/")
+    .pop()
+    .toLowerCase() || "index.html";
+
 mainNav.querySelectorAll("a").forEach(link => {
+
+  const linkPage =
+    link.getAttribute("href")
+      ?.split("/")
+      .pop()
+      .split("#")[0]
+      .toLowerCase();
+
+  /* Active page */
+  if (
+    linkPage &&
+    linkPage === currentPage &&
+    !link.classList.contains("mobile-booking")
+  ) {
+    link.classList.add("active");
+  }
+
+  /* Close mobile menu */
   link.addEventListener("click", () => {
     closeMenu();
   });
-});
 
+});
 
 
 
