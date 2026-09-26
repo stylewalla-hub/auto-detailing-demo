@@ -1,0 +1,2096 @@
+/* =========================================
+   WORK HERO
+========================================= */
+
+.work-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 680px;
+  overflow: hidden;
+  background: #080909;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------
+   BACKGROUND
+----------------------------------------- */
+
+.work-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/work-hero.png");
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.03);
+  animation: workHeroZoom 14s ease-out forwards;
+}
+
+@keyframes workHeroZoom {
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* -----------------------------------------
+   DARK OVERLAY
+----------------------------------------- */
+
+.work-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.18) 38%,
+      rgba(0, 0, 0, 0.28) 65%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
+}
+
+
+/* -----------------------------------------
+   HERO CONTENT
+----------------------------------------- */
+
+.work-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateY(-2%);
+}
+
+
+/* -----------------------------------------
+   LABEL
+----------------------------------------- */
+
+.work-hero-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  color: rgba(245, 245, 242, 0.72);
+}
+
+.work-hero-label span {
+  display: block;
+  width: 34px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+
+/* -----------------------------------------
+   HEADING
+----------------------------------------- */
+
+.work-hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 7vw, 100px);
+
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+
+  font-weight: 800;
+
+  color: #f5f5f2;
+
+  text-transform: uppercase;
+}
+
+.work-hero h1 strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION
+----------------------------------------- */
+
+.work-hero-content p {
+  margin: 28px 0 34px;
+
+  max-width: 480px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: rgba(245, 245, 242, 0.68);
+}
+
+
+/* =========================================
+   HERO CTA — PREMIUM SHINE
+========================================= */
+
+.work-hero-btn {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  min-width: 190px;
+  padding: 15px 23px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+  color: #090a0a;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 rgba(217, 255, 79, 0);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Shine layer */
+
+.work-hero-btn::before {
+  content: "";
+
+  position: absolute;
+  top: -20%;
+  left: -100%;
+
+  width: 55%;
+  height: 140%;
+
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 35%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0.12) 65%,
+    transparent 100%
+  );
+
+  transform: skewX(-20deg);
+
+  animation: heroButtonShine 4s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* Keep content above shine */
+
+.work-hero-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.work-hero-btn {
+  isolation: isolate;
+}
+
+
+/* Hover */
+
+.work-hero-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 35px rgba(217, 255, 79, 0.18);
+}
+
+
+/* Shine movement */
+
+@keyframes heroButtonShine {
+
+  0% {
+    left: -100%;
+  }
+
+  35%,
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* -----------------------------------------
+   SCROLL INDICATOR
+----------------------------------------- */
+
+.work-scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 28px;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  color: rgba(245, 245, 242, 0.48);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.work-scroll i {
+  display: block;
+
+  width: 1px;
+  height: 38px;
+
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    transparent
+  );
+
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.65);
+    transform-origin: top;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .work-hero {
+    min-height: 650px;
+    height: 100svh;
+  }
+
+  .work-hero-bg {
+    background-position: center center;
+  }
+
+  .work-hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.48),
+        rgba(0, 0, 0, 0.16) 35%,
+        rgba(0, 0, 0, 0.48) 68%,
+        rgba(0, 0, 0, 0.86)
+      );
+  }
+
+  .work-hero-content {
+    width: calc(100% - 32px);
+    transform: translateY(-4%);
+  }
+
+  .work-hero-label {
+    margin-bottom: 20px;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    gap: 10px;
+  }
+
+  .work-hero-label span {
+    width: 24px;
+  }
+
+  .work-hero h1 {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 0.94;
+  }
+
+  .work-hero-content p {
+    max-width: 310px;
+
+    margin: 22px 0 28px;
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .work-hero-btn {
+    min-width: 175px;
+    padding: 14px 20px;
+
+    font-size: 10px;
+  }
+
+  .work-scroll {
+    bottom: 20px;
+    font-size: 8px;
+  }
+
+  .work-scroll i {
+    height: 28px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+  .work-hero h1 {
+    font-size: 39px;
+  }
+
+  .work-hero-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-hero-bg,
+  .work-scroll i {
+    animation: none;
+  }
+
+  .work-hero-bg {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SELECTED WORK
+========================================= */
+
+.selected-work {
+  position: relative;
+  padding: 140px 0 120px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.selected-work-intro {
+  max-width: 1100px;
+  margin: 0 auto 62px;
+  text-align: center;
+}
+
+.selected-work-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  color: rgba(245, 245, 242, 0.65);
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.selected-work-label span {
+  width: 34px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+.selected-work-intro h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.selected-work-intro h2 strong {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.selected-work-intro p {
+  max-width: 650px;
+
+  margin: 25px auto 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   WORK GRID
+========================================= */
+
+.selected-work-grid {
+  display: grid;
+
+  grid-template-columns: 1.65fr 0.8fr;
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 16px;
+
+  min-height: 645px;
+}
+
+
+/* =========================================
+   CLICKABLE CARD
+========================================= */
+
+.work-feature {
+  position: relative;
+
+  display: block;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 16px;
+
+  background: var(--surface);
+
+  text-decoration: none;
+
+  isolation: isolate;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN FEATURE
+========================================= */
+
+.work-feature-main {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+
+/* =========================================
+   SMALL FEATURES
+========================================= */
+
+.work-feature-small {
+  grid-column: 2;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.work-image {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.65, 0.2, 1),
+    filter 0.6s ease;
+}
+
+
+/* =========================================
+   DARK GRADIENT
+========================================= */
+
+.work-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      rgba(0, 0, 0, 0.04) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.work-card-info {
+  position: absolute;
+
+  left: 26px;
+  right: 26px;
+  bottom: 24px;
+
+  z-index: 3;
+
+  color: var(--text);
+}
+
+.work-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.work-card-title span {
+  display: flex;
+  align-items: center;
+
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.work-card-title span::before {
+  content: "";
+
+  width: 24px;
+  height: 1px;
+
+  margin-right: 10px;
+
+  flex: 0 0 auto;
+
+  background: var(--accent);
+}
+
+.work-card-info p {
+  margin: 8px 0 0 34px;
+
+  color: rgba(245, 245, 242, 0.6);
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.work-arrow {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  color: var(--text);
+
+  font-size: 18px;
+  line-height: 1;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .work-feature:hover .work-image img {
+    transform: scale(1.06);
+  }
+
+  .work-feature:hover .work-arrow {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #090a0a;
+    transform: translateX(3px);
+  }
+
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.selected-work-bottom {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 34px;
+}
+
+.selected-work-more {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.selected-work-more::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.selected-work-more span {
+  color: rgba(245, 245, 242, 0.52);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+
+
+/* =========================================
+   SELECTED WORK — GALLERY BUTTON
+========================================= */
+
+.selected-work-btn {
+  position: relative;
+  isolation: isolate;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  min-width: 220px;
+  padding: 15px 24px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--accent);
+  color: #090a0a;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 0 rgba(217, 255, 79, 0);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* -----------------------------------------
+   SHINE
+----------------------------------------- */
+
+.selected-work-btn::before {
+  content: "";
+
+  position: absolute;
+  top: -30%;
+  left: -100%;
+
+  width: 55%;
+  height: 160%;
+
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 35%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.08) 65%,
+    transparent 100%
+  );
+
+  transform: skewX(-20deg);
+
+  animation: galleryButtonShine 4s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* -----------------------------------------
+   BUTTON CONTENT
+----------------------------------------- */
+
+.selected-work-btn span {
+  position: relative;
+  z-index: 2;
+
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* -----------------------------------------
+   HOVER
+----------------------------------------- */
+
+.selected-work-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(217, 255, 79, 0.18);
+}
+
+
+/* -----------------------------------------
+   SHINE ANIMATION
+----------------------------------------- */
+
+@keyframes galleryButtonShine {
+
+  0% {
+    left: -100%;
+  }
+
+  35%,
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .selected-work-btn {
+    min-width: 0;
+
+    padding: 14px 20px;
+
+    font-size: 10px;
+  }
+
+  .selected-work-btn span {
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .selected-work {
+    padding: 110px 0 100px;
+  }
+
+  .selected-work-grid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows:
+      420px
+      230px
+      230px;
+
+    min-height: auto;
+  }
+
+  .work-feature-main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .work-feature-small {
+    grid-column: auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .selected-work {
+    padding: 90px 0 90px;
+  }
+
+  .selected-work-intro {
+    margin-bottom: 42px;
+  }
+
+  .selected-work-label {
+    margin-bottom: 19px;
+
+    font-size: 9px;
+    letter-spacing: 0.23em;
+  }
+
+  .selected-work-label span {
+    width: 24px;
+  }
+
+  .selected-work-intro h2 {
+    font-size: clamp(38px, 11vw, 56px);
+    line-height: 0.95;
+  }
+
+  .selected-work-intro p {
+    max-width: 330px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+  }
+
+
+  /* -----------------------------
+     MOBILE GRID
+  ----------------------------- */
+
+  .selected-work-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows:
+      430px
+      250px
+      250px
+      250px;
+
+    gap: 12px;
+  }
+
+  .work-feature-main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .work-feature-small {
+    grid-column: 1;
+  }
+
+
+  /* -----------------------------
+     CARD CONTENT
+  ----------------------------- */
+
+  .work-card-info {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .work-card-title span {
+    font-size: 10px;
+  }
+
+  .work-card-title span::before {
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  .work-card-info p {
+    margin-left: 28px;
+    font-size: 12px;
+  }
+
+  .work-arrow {
+    width: 36px;
+    height: 36px;
+
+    font-size: 16px;
+  }
+
+
+  /* -----------------------------
+     BOTTOM
+  ----------------------------- */
+
+  .selected-work-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 22px;
+
+    margin-top: 28px;
+  }
+
+  .selected-work-more {
+    width: 100%;
+  }
+
+  .selected-work-more span {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-image img {
+    transition: none;
+  }
+
+  .work-feature:hover .work-image img {
+    transform: none;
+  }
+
+  .work-arrow,
+  .selected-work-btn {
+    transition: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   03 — OUR GALLERY
+========================================= */
+
+.work-gallery {
+  position: relative;
+
+  padding: 140px 0 150px;
+
+  background-image: #090a0b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.work-gallery-intro {
+  max-width: 1050px;
+
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+.work-gallery-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  color: rgba(245, 245, 242, 0.65);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+}
+
+.work-gallery-label span {
+  width: 34px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+.work-gallery-intro h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: clamp(48px, 6vw, 82px);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.work-gallery-intro h2 strong {
+  color: var(--accent);
+
+  font-weight: 800;
+}
+
+.work-gallery-intro p {
+  max-width: 620px;
+
+  margin: 25px auto 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.work-gallery-filters {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 28px;
+}
+
+.gallery-filter {
+  position: relative;
+
+  min-width: 100px;
+
+  padding: 11px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: rgba(245, 245, 242, 0.72);
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gallery-filter:hover {
+  border-color: rgba(217, 255, 79, 0.55);
+
+  color: var(--text);
+}
+
+.gallery-filter.active {
+  border-color: var(--accent);
+
+  background: var(--accent);
+
+  color: #090a0a;
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.work-gallery-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  grid-template-rows:
+    300px
+    225px
+    155px
+    225px;
+
+  gap: 10px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   GALLERY ITEMS
+========================================= */
+
+.gallery-item {
+  position: relative;
+
+  display: block;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+  background: var(--surface);
+
+  text-decoration: none;
+
+  isolation: isolate;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.75s
+    cubic-bezier(0.2, 0.65, 0.2, 1),
+    filter 0.5s ease;
+}
+
+
+/* =========================================
+   GRID POSITIONS
+========================================= */
+
+
+/* Row 1 */
+
+.gallery-item-01 {
+  grid-column: 1 / 6;
+  grid-row: 1 / 3;
+}
+
+.gallery-item-02 {
+  grid-column: 6 / 10;
+  grid-row: 1;
+}
+
+.gallery-item-03 {
+  grid-column: 10 / 13;
+  grid-row: 1;
+}
+
+
+/* Row 2 */
+
+.gallery-item-04 {
+  grid-column: 6 / 8;
+  grid-row: 2;
+}
+
+.gallery-item-05 {
+  grid-column: 8 / 10;
+  grid-row: 2;
+}
+
+.gallery-item-06 {
+  grid-column: 10 / 13;
+  grid-row: 2;
+}
+
+
+/* Row 3 */
+
+.gallery-item-07 {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.gallery-item-08 {
+  grid-column: 4 / 7;
+  grid-row: 3;
+}
+
+.gallery-item-09 {
+  grid-column: 7 / 10;
+  grid-row: 3;
+}
+
+.gallery-item-10 {
+  grid-column: 10 / 13;
+  grid-row: 3;
+}
+
+
+/* Row 4 */
+
+.gallery-item-11 {
+  grid-column: 1 / 5;
+  grid-row: 4;
+}
+
+.gallery-item-12 {
+  grid-column: 5 / 13;
+  grid-row: 4;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .gallery-item:hover img {
+    transform: scale(1.055);
+  }
+
+  .gallery-item:hover {
+    border-color:
+      rgba(217, 255, 79, 0.35);
+  }
+
+}
+
+
+/* =========================================
+   FILTER ANIMATION
+========================================= */
+
+.gallery-item.is-hidden {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .work-gallery {
+    padding: 110px 0 120px;
+  }
+
+  .work-gallery-grid {
+
+    grid-template-columns:
+      repeat(6, 1fr);
+
+    grid-template-rows:
+      300px
+      220px
+      180px
+      220px;
+  }
+
+
+  .gallery-item-01 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .gallery-item-02 {
+    grid-column: 4 / 7;
+    grid-row: 1;
+  }
+
+  .gallery-item-03 {
+    grid-column: 4 / 7;
+    grid-row: 2;
+  }
+
+  .gallery-item-04 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+
+  .gallery-item-05 {
+    grid-column: 3 / 5;
+    grid-row: 3;
+  }
+
+  .gallery-item-06 {
+    grid-column: 5 / 7;
+    grid-row: 3;
+  }
+
+  .gallery-item-07 {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  .gallery-item-08 {
+    grid-column: 3 / 5;
+    grid-row: 4;
+  }
+
+  .gallery-item-09 {
+    grid-column: 5 / 7;
+    grid-row: 4;
+  }
+
+  .gallery-item-10,
+  .gallery-item-11,
+  .gallery-item-12 {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .work-gallery {
+    padding: 90px 0 100px;
+  }
+
+
+  /* Intro */
+
+  .work-gallery-intro {
+    margin-bottom: 32px;
+  }
+
+  .work-gallery-label {
+    margin-bottom: 19px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+
+    gap: 10px;
+  }
+
+  .work-gallery-label span {
+    width: 24px;
+  }
+
+  .work-gallery-intro h2 {
+    font-size:
+      clamp(38px, 11vw, 58px);
+  }
+
+  .work-gallery-intro p {
+    max-width: 330px;
+
+    margin-top: 19px;
+
+    font-size: 14px;
+  }
+
+
+  /* Filters */
+
+  .work-gallery-filters {
+
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+
+    margin-bottom: 18px;
+
+    scrollbar-width: none;
+  }
+
+  .work-gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-filter {
+    min-width: auto;
+
+    flex: 0 0 auto;
+
+    padding: 10px 17px;
+
+    font-size: 9px;
+  }
+
+
+  /* Gallery */
+
+  .work-gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    grid-template-rows:
+      230px
+      170px
+      170px
+      170px
+      220px
+      180px;
+
+    gap: 8px;
+  }
+
+
+  .gallery-item-01 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .gallery-item-02 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .gallery-item-03 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery-item-04 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .gallery-item-05 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .gallery-item-06 {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  .gallery-item-07 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .gallery-item-08 {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  .gallery-item-09 {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  .gallery-item-10 {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+  .gallery-item-11,
+  .gallery-item-12 {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+/* =========================================
+   04 — BOOK YOUR DETAIL
+========================================= */
+
+.work-booking {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #080909;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.work-booking-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 9, 9, 0.98) 0%,
+      rgba(8, 9, 9, 0.88) 28%,
+      rgba(8, 9, 9, 0.48) 58%,
+      rgba(8, 9, 9, 0.18) 100%
+    ),
+    url("images/work-book-detail-bg.png");
+
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(1.02);
+
+  transition: transform 1.2s ease;
+}
+
+
+/* subtle image movement */
+
+.work-booking:hover .work-booking-bg {
+  transform: scale(1.045);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.work-booking .container {
+  position: relative;
+  z-index: 2;
+}
+
+.work-booking-content {
+  max-width: 650px;
+
+  padding: 110px 0;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.work-booking-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  color: rgba(245, 245, 242, 0.65);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+}
+
+.work-booking-label span {
+  width: 36px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.work-booking-content h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size:
+    clamp(52px, 7vw, 92px);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.work-booking-content h2 strong {
+  display: block;
+
+  color: var(--accent);
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.work-booking-content p {
+  margin: 28px 0 34px;
+
+  max-width: 500px;
+
+  color: rgba(245, 245, 242, 0.72);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BOOKING BUTTON — PREMIUM SHINE
+========================================= */
+
+.work-booking-btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  min-width: 230px;
+  padding: 17px 25px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+  color: #090a0a;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 rgba(217, 255, 79, 0);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================
+   MOVING SHINE
+========================================= */
+
+.work-booking-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: -30%;
+  left: -80%;
+
+  width: 45%;
+  height: 160%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.18) 35%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.18) 65%,
+      transparent 100%
+    );
+
+  transform: skewX(-22deg);
+
+  animation:
+    bookingButtonShine 3.5s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+@keyframes bookingButtonShine {
+
+  0% {
+    left: -80%;
+  }
+
+  45% {
+    left: 140%;
+  }
+
+  100% {
+    left: 140%;
+  }
+
+}
+
+
+/* =========================================
+   BUTTON CONTENT
+========================================= */
+
+.work-booking-btn span {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.work-booking-arrow {
+  font-size: 20px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.work-booking-btn:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 28px rgba(217, 255, 79, 0.25);
+}
+
+.work-booking-btn:hover .work-booking-arrow {
+  transform: translateX(5px);
+}
+
+
+
+
+
+
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.work-booking-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 35px;
+
+  color: rgba(245, 245, 242, 0.45);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.work-booking-note span {
+  color: var(--accent);
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .work-booking {
+    min-height: 560px;
+  }
+
+  .work-booking-bg {
+    background-position: 62% center;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(8, 9, 9, 0.96) 0%,
+        rgba(8, 9, 9, 0.72) 55%,
+        rgba(8, 9, 9, 0.3) 100%
+      ),
+      url("images/book-detail-bg.jpg");
+  }
+
+  .work-booking-content {
+    max-width: 580px;
+
+    padding: 90px 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .work-booking {
+    min-height: 600px;
+  }
+
+  .work-booking-bg {
+
+    background-position: 68% center;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(8, 9, 9, 0.97) 0%,
+        rgba(8, 9, 9, 0.78) 65%,
+        rgba(8, 9, 9, 0.45) 100%
+      ),
+      url("images/book-detail-bg.jpg");
+  }
+
+  .work-booking-content {
+    padding: 85px 0;
+  }
+
+  .work-booking-label {
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+  .work-booking-label span {
+    width: 25px;
+  }
+
+  .work-booking-content h2 {
+    font-size:
+      clamp(44px, 12vw, 62px);
+
+    line-height: 0.92;
+  }
+
+  .work-booking-content p {
+    margin: 22px 0 30px;
+
+    max-width: 320px;
+
+    font-size: 15px;
+  }
+
+  .work-booking-btn {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 16px 22px;
+  }
+
+  .work-booking-note {
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 28px;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+  }
+
+}
