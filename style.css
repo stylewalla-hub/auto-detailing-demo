@@ -1,3 +1,75 @@
+/* =========================================
+   LOCAL FONTS
+========================================= */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter_18pt-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter_18pt-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter_18pt-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter_18pt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
 /* ================================
    YOUR AUTO DETAILING
    Master Design System
@@ -25,7 +97,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -6510,11 +6582,7 @@ a {
   color:
     rgba(255,255,255,.92);
 
-  font-family:
-    "Segoe Script",
-    "Bradley Hand",
-    "Brush Script MT",
-    cursive;
+  font-family: "Caveat", cursive;
 
   font-size:
     clamp(27px, 2.25vw, 36px);
@@ -6539,11 +6607,7 @@ a {
 
   color: var(--accent);
 
-  font-family:
-    "Segoe Script",
-    "Bradley Hand",
-    "Brush Script MT",
-    cursive;
+  font-family: "Caveat", cursive;
 
   font-size: 19px;
 
@@ -6795,11 +6859,7 @@ a {
   color:
     rgba(255,255,255,.72);
 
-  font-family:
-    "Segoe Script",
-    "Bradley Hand",
-    "Brush Script MT",
-    cursive;
+  font-family: "Caveat", cursive;
 
   font-size: 22px;
 
@@ -10435,13 +10495,6 @@ body {
   font-synthesis: none !important;
 }
 
-/* Force site typography */
-body,
-body *,
-body *::before,
-body *::after {
-  font-family: Arial, Helvetica, sans-serif !important;
-}
 
 /* Form elements */
 button,
