@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `A CLEANER, HEALTHIER<br><span>RIDE.</span>`,
       description:
         "A deep interior reset designed to remove built-up dirt, dust and odors while restoring the comfort and freshness of your vehicle.",
-      image: "images/service-interior.png",
+      image: "images/service-interior.webp",
       alt: "Interior car detailing",
       features: [
         "Deep cleaning",
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `A SHARPER, CLEANER<br><span>FINISH.</span>`,
       description:
         "A careful exterior detail focused on removing surface contamination, restoring gloss and leaving your vehicle looking sharp from every angle.",
-      image: "images/service-exterior.png",
+      image: "images/service-exterior.webp",
       alt: "Exterior car detailing",
       features: [
         "Safe wash",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `BRING BACK THE<br><span>DEEPER GLOSS.</span>`,
       description:
         "Machine polishing designed to reduce swirls, light scratches and paint imperfections while bringing clarity and depth back to the finish.",
-      image: "images/service-paint-correction.png",
+      image: "images/service-paint-correction.webp",
       alt: "Paint correction service",
       features: [
         "Swirl removal",
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `PROTECT THE FINISH.<br><span>KEEP THE GLOSS.</span>`,
       description:
         "Long-term paint protection designed to help defend your vehicle's finish while adding gloss, slickness and easier maintenance.",
-      image: "images/service-protection.png",
+      image: "images/service-protection.webp",
       alt: "Paint protection service",
       features: [
         "Ceramic coating",

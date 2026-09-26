@@ -26,7 +26,7 @@
   z-index: -3;
 
   background-image:
-    url("images/about-hero.png");
+    url("images/about-hero.webp");
 
   background-size: cover;
   background-position: center center;
@@ -727,7 +727,7 @@
       rgba(11, 12, 13, 0.92) 45%,
       rgba(11, 12, 13, 0.82) 100%
     ),
-    url("images/about-who-bg.png") center center / cover no-repeat;
+    url("images/about-who-bg.webp") center center / cover no-repeat;
 
   padding: 150px 0 170px;
 
@@ -1120,7 +1120,7 @@
       rgba(11, 12, 13, 0.25) 0%,
       rgba(11, 12, 13, 0.55) 100%
     ),
-    url("images/about-story-bg.png");
+    url("images/about-story-bg.webp");
 
   background-size: cover;
   background-position: center center;
@@ -1372,7 +1372,7 @@
       rgba(11,12,13,0.08),
       rgba(11,12,13,0.18)
     ),
-    url("images/about-story.png");
+    url("images/about-story.webp");
 
   background-size: cover;
   background-position: center;
@@ -2772,7 +2772,7 @@
   inset: 0;
 
   background-image:
-    url("images/about-cta-bg.png");
+    url("images/about-cta-bg.webp");
 
   background-size: cover;
   background-position: center center;

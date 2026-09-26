@@ -22,7 +22,7 @@
   z-index: -3;
 
   background-image:
-    url("images/services-hero.png");
+    url("images/services-hero.webp");
 
   background-size: cover;
   background-position: center center;
@@ -756,7 +756,7 @@
     rgba(11,12,13,0.86) 70%,
     rgba(11,12,13,0.98) 100%
   ),
-    url("images/service-menu-bg.png");
+    url("images/service-menu-bg.webp");
 
   background-size: cover;
   background-position: center center;
@@ -1952,7 +1952,7 @@ mask-composite: exclude;
       rgba(11, 12, 13, 0.92) 70%,
       rgba(11, 12, 13, 1) 100%
     ),
-    url("images/service-details-bg.png");
+    url("images/service-details-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -2799,7 +2799,7 @@ mask-composite: exclude;
       rgba(11, 12, 13, 0.58) 45%,
       rgba(11, 12, 13, 0.72) 100%
     ),
-    url("images/service-finder-bg.png");
+    url("images/service-finder-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -3726,7 +3726,7 @@ mask-composite: exclude;
       rgba(11, 12, 13, 0.72) 45%,
       rgba(11, 12, 13, 0.90) 100%
     ),
-    url("images/service-addon-bg.png");
+    url("images/service-addon-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -4355,7 +4355,7 @@ mask-composite: exclude;
       rgba(11, 12, 13, 0.72) 45%,
       rgba(11, 12, 13, 0.92) 100%
     ),
-    url("images/service-faq-bg.png");
+    url("images/service-faq-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -5040,7 +5040,7 @@ mask-composite: exclude;
   inset: 0;
 
   background:
-    url("images/booking-services-bg.png");
+    url("images/booking-services-bg.webp");
 
   background-size: cover;
   background-position: center;

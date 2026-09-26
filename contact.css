@@ -34,7 +34,7 @@
   z-index: -2;
 
   background-image:
-    url("images/contact-hero.png");
+    url("images/contact-hero.webp");
 
   background-size: cover;
 
@@ -1727,7 +1727,7 @@
       rgba(5, 6, 7, .62) 45%,
       rgba(5, 6, 7, .88) 100%
     ),
-    url("images/work-hero.png");
+    url("images/work-hero.webp");
 
   background-size: cover;
   background-position: center;
@@ -2258,7 +2258,7 @@
   inset: 0;
 
   background:
-    url("images/contact-cta.png")
+    url("images/contact-cta.webp")
     center center /
     cover no-repeat;
 

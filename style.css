@@ -639,7 +639,7 @@ a {
   position: absolute;
   inset: -3%;
 
-  background-image: url("images/hero-image.png");
+  background-image: url("images/hero-image.webp");
   background-size: cover;
   background-position: center;
 
@@ -1014,7 +1014,7 @@ a {
       rgba(7, 8, 9, 0.76) 38%,
       rgba(7, 8, 9, 0.94) 100%
     ),
-    url("images/service-bg.png")
+    url("images/service-bg.webp")
     center center / cover no-repeat;
 
   overflow: hidden;
@@ -1794,7 +1794,7 @@ a {
   inset: 0;
   z-index: 0;
 
-  background-image: url("images/trust-section-bg.png");
+  background-image: url("images/trust-section-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2360,7 +2360,7 @@ a {
 
   transform: translateX(-50%);
 
-  background-image: url("images/trust-bottom-strip-bg.png");
+  background-image: url("images/trust-bottom-strip-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2666,7 +2666,7 @@ a {
 
 
   .trust-background {
-    background-image: url("images/trust-section-mobile.png");
+    background-image: url("images/trust-section-mobile.webp");
 
     background-size: cover;
 
@@ -3413,7 +3413,7 @@ a {
   z-index: -3;
 
   background-image:
-    url("images/package-section-bg.png");
+    url("images/package-section-bg.webp");
 
   background-size: cover;
   background-position: center center;
@@ -3950,7 +3950,7 @@ a {
       rgba(10, 11, 12, 0.55),
       rgba(5, 6, 7, 0.92)
     ),
-    url("images/essential-bg.png");
+    url("images/essential-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -3965,7 +3965,7 @@ a {
       rgba(10, 11, 12, 0.55),
       rgba(5, 6, 7, 0.92)
     ),
-    url("images/signature-bg.png");
+    url("images/signature-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -3980,7 +3980,7 @@ a {
       rgba(10, 11, 12, 0.55),
       rgba(5, 6, 7, 0.92)
     ),
-    url("images/ultimate-bg.png");
+    url("images/ultimate-bg.webp");
 
   background-size: cover;
   background-position: center;
@@ -4569,7 +4569,7 @@ a {
   z-index: -2;
 
   background:
-    url("images/work-featured.png")
+    url("images/work-featured.webp")
     center center / cover no-repeat;
 
   transform: scale(1.02);
@@ -4877,35 +4877,35 @@ a {
 /* IMAGE ASSIGNMENTS */
 
 .work-card:nth-child(1) .work-card-image {
-  background-image: url("images/work-exterior.png");
+  background-image: url("images/work-exterior.webp");
 }
 
 .work-card:nth-child(2) .work-card-image {
-  background-image: url("images/work-interior.png");
+  background-image: url("images/work-interior.webp");
 }
 
 .work-card:nth-child(3) .work-card-image {
-  background-image: url("images/work-wheels.png");
+  background-image: url("images/work-wheels.webp");
 }
 
 .work-card:nth-child(4) .work-card-image {
-  background-image: url("images/work-paint.png");
+  background-image: url("images/work-paint.webp");
 }
 
 .work-card:nth-child(5) .work-card-image {
-  background-image: url("images/work-ceramic.png");
+  background-image: url("images/work-ceramic.webp");
 }
 
 .work-card:nth-child(6) .work-card-image {
-  background-image: url("images/work-paint-two.png");
+  background-image: url("images/work-paint-two.webp");
 }
 
 .work-card:nth-child(7) .work-card-image {
-  background-image: url("images/work-engine.png");
+  background-image: url("images/work-engine.webp");
 }
 
 .work-card:nth-child(8) .work-card-image {
-  background-image: url("images/work-truck.png");
+  background-image: url("images/work-truck.webp");
 }
 
 
@@ -5335,7 +5335,7 @@ a {
   z-index: -2;
 
   background:
-    url("images/stories-bg.png")
+    url("images/stories-bg.webp")
     center center / cover no-repeat;
 
   filter:
@@ -6221,7 +6221,7 @@ a {
       rgba(5,6,7,.30) 68%,
       rgba(5,6,7,.42) 100%
     ),
-    url("images/detailer-main.png");
+    url("images/detailer-main.webp");
 
   background-size: cover;
   background-position: center center;
@@ -6957,7 +6957,7 @@ a {
         rgba(5,6,7,.38) 70%,
         rgba(5,6,7,.72) 100%
       ),
-      url("images/detailer-mobile.png");
+      url("images/detailer-mobile.webp");
 
     background-size: cover;
 
@@ -7183,7 +7183,7 @@ a {
       rgba(5,6,7,.30) 72%,
       rgba(5,6,7,.48) 100%
     ),
-    url("images/faq-bg.png");
+    url("images/faq-bg.webp");
 
   background-size: cover;
 
@@ -8316,7 +8316,7 @@ a {
       rgba(5,6,7,.05) 55%,
       rgba(5,6,7,.78) 100%
     ),
-    url("images/booking-bg.png");
+    url("images/booking-bg.webp");
 
   background-size: cover;
 
@@ -9013,7 +9013,7 @@ a {
         rgba(5,6,7,.48) 68%,
         rgba(5,6,7,.72) 100%
       ),
-      url("images/booking-bg.png");
+      url("images/booking-bg.webp");
 
     background-position:
       62% center;

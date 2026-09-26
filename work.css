@@ -21,7 +21,7 @@
 .work-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/work-hero.png");
+  background-image: url("images/work-hero.webp");
   background-size: cover;
   background-position: center center;
   transform: scale(1.03);
@@ -1706,7 +1706,7 @@
       rgba(8, 9, 9, 0.48) 58%,
       rgba(8, 9, 9, 0.18) 100%
     ),
-    url("images/work-book-detail-bg.png");
+    url("images/work-book-detail-bg.webp");
 
   background-size: cover;
   background-position: center;
