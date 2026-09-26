@@ -492,7 +492,7 @@ if (
 
 
 /* =========================================
-   BEFORE / AFTER COMPARISON
+   BEFORE / AFTER COMPARISON — SMOOTH
 ========================================= */
 
 const beforeAfter =
@@ -524,55 +524,90 @@ if (
 ) {
 
   let isDragging = false;
+  let animationFrame = null;
+  let pendingX = null;
 
   const START_POSITION = 62;
 
+  /* -----------------------------------------
+     CACHE FRAME SIZE
+  ----------------------------------------- */
+
+  let frameWidth = 0;
+
+  function updateFrameSize() {
+
+    frameWidth =
+      beforeAfterImage.getBoundingClientRect().width;
+
+    beforeImage.style.width =
+      `${frameWidth}px`;
+  }
+
+
+  /* -----------------------------------------
+     SET POSITION
+  ----------------------------------------- */
+
   function setComparisonPosition(percent) {
 
-    const clamped =
-      Math.min(
-        100,
-        Math.max(0, percent)
-      );
+    const clamped = Math.min(
+      100,
+      Math.max(0, percent)
+    );
 
     beforeAfterImage.style.setProperty(
       "--split",
       `${clamped}%`
     );
-
-    /*
-      The BEFORE image must stay the same
-      size as the full comparison frame.
-    */
-
-    beforeImage.style.width =
-      `${beforeAfterImage.offsetWidth}px`;
   }
 
+
+  /* -----------------------------------------
+     GET POSITION
+  ----------------------------------------- */
 
   function getPosition(clientX) {
 
     const rect =
       beforeAfterImage.getBoundingClientRect();
 
-    const position =
-      ((clientX - rect.left) / rect.width) * 100;
-
-    return position;
+    return (
+      ((clientX - rect.left) / rect.width) * 100
+    );
   }
 
 
+  /* -----------------------------------------
+     SMOOTH POINTER UPDATE
+  ----------------------------------------- */
+
   function updateFromPointer(clientX) {
 
-    const position =
-      getPosition(clientX);
+    pendingX = clientX;
 
-    setComparisonPosition(position);
+    if (animationFrame) return;
+
+    animationFrame =
+      requestAnimationFrame(() => {
+
+        if (pendingX !== null) {
+
+          setComparisonPosition(
+            getPosition(pendingX)
+          );
+
+        }
+
+        pendingX = null;
+        animationFrame = null;
+
+      });
   }
 
 
   /* =========================================
-     MOUSE
+     POINTER DOWN
   ========================================= */
 
   beforeAfterImage.addEventListener(
@@ -591,6 +626,10 @@ if (
   );
 
 
+  /* =========================================
+     POINTER MOVE
+  ========================================= */
+
   beforeAfterImage.addEventListener(
     "pointermove",
     (event) => {
@@ -603,37 +642,56 @@ if (
   );
 
 
-  beforeAfterImage.addEventListener(
-    "pointerup",
-    (event) => {
+  /* =========================================
+     POINTER UP
+  ========================================= */
 
-      isDragging = false;
+  function stopDragging(event) {
 
-      try {
-        beforeAfterImage.releasePointerCapture(
-          event.pointerId
-        );
-      } catch (error) {}
+    isDragging = false;
+
+    if (animationFrame) {
+
+      cancelAnimationFrame(
+        animationFrame
+      );
+
+      animationFrame = null;
 
     }
+
+    pendingX = null;
+
+    try {
+
+      beforeAfterImage.releasePointerCapture(
+        event.pointerId
+      );
+
+    } catch (error) {}
+
+  }
+
+
+  beforeAfterImage.addEventListener(
+    "pointerup",
+    stopDragging
   );
 
 
   beforeAfterImage.addEventListener(
     "pointercancel",
-    () => {
-
-      isDragging = false;
-
-    }
+    stopDragging
   );
 
 
   /* =========================================
-     INITIAL POSITION
+     INITIALIZE
   ========================================= */
 
   function initializeComparison() {
+
+    updateFrameSize();
 
     setComparisonPosition(
       START_POSITION
@@ -641,6 +699,10 @@ if (
 
   }
 
+
+  /* =========================================
+     RESIZE
+  ========================================= */
 
   window.addEventListener(
     "resize",
@@ -651,7 +713,6 @@ if (
   initializeComparison();
 
 }
-
 
 
 
